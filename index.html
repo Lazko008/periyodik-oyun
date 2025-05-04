@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periyodik Özellikler Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+</head>
+<body>
+    <div id="particles-js" class="particles-container"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="atom-model">
+                    <div class="nucleus"></div>
+                    <div class="electron-shell">
+                        <div class="electron"></div>
+                    </div>
+                    <div class="electron-shell shell-2">
+                        <div class="electron"></div>
+                    </div>
+                    <div class="electron-shell shell-3">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                <h1>Periyodik Özellikler Oyunu</h1>
+            </div>
+            <nav>
+                <button id="infoBtn" class="nav-btn active"><i class="fas fa-info-circle"></i> Bilgilendirme</button>
+                <button id="gameBtn" class="nav-btn"><i class="fas fa-gamepad"></i> Oyun</button>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="infoSection" class="section active">
+            <h2>Periyodik Özellikler Hakkında</h2>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-atom"></i> Periyodik Özellikler Nedir?</h3>
+                <p>Periyodik özellikler, periyodik tablodaki elementlerin atom numarası, atom kütlesi, elektronegatiflik, iyonlaşma enerjisi, elektron ilgisi ve atom yarıçapı gibi fiziksel ve kimyasal özelliklerini ifade eder. Bu özellikler, elementlerin periyodik tablodaki konumlarına göre belirli eğilimler gösterir.</p>
+            </div>
+            
+            <div class="trend-container">
+                <div class="trend-card">
+                    <h3>Atom Kütlesi ve Atom Numarası</h3>
+                    <p>Atom numarası, bir atomun çekirdeğindeki proton sayısını gösterir ve periyodik tabloda soldan sağa doğru artar. Atom kütlesi ise atomun proton ve nötronlarının toplam kütlesini ifade eder ve genellikle atom numarası arttıkça artar.</p>
+                    
+                    <table id="atomicMassTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Sembol</th>
+                                <th>Atom Numarası</th>
+                                <th>Atom Kütlesi (u)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>Elektronegatiflik</h3>
+                    <p>Elektronegatiflik, bir atomun bağ elektronlarını kendine çekme eğiliminin ölçüsüdür. Periyodik tabloda soldan sağa doğru artar, yukarıdan aşağıya doğru azalır. En elektronegatif element flordur.</p>
+                    
+                    <table id="electronegativityTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Sembol</th>
+                                <th>Elektronegatiflik (Pauling)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="trend-container">
+                <div class="trend-card">
+                    <h3>Elektron İlgisi</h3>
+                    <p>Elektron ilgisi, bir atomun elektron kazanırken açığa çıkan enerji miktarıdır. Periyodik tabloda genellikle soldan sağa doğru artar. Halojenler en yüksek elektron ilgisine sahiptir.</p>
+                    
+                    <table id="electronAffinityTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Sembol</th>
+                                <th>Elektron İlgisi (kJ/mol)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>İyonlaşma Enerjisi</h3>
+                    <p>İyonlaşma enerjisi, bir atomdan bir elektron koparmak için gereken enerji miktarıdır. Periyodik tabloda soldan sağa doğru artar, yukarıdan aşağıya doğru azalır. Soy gazlar en yüksek iyonlaşma enerjisine sahiptir.</p>
+                    
+                    <table id="ionizationEnergyTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Sembol</th>
+                                <th>İyonlaşma Enerjisi (kJ/mol)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="trend-container">
+                <div class="trend-card">
+                    <h3>Atom Yarıçapı</h3>
+                    <p>Atom yarıçapı, bir atomun merkezinden en dış elektronlarına olan mesafedir. Periyodik tabloda soldan sağa doğru azalır, yukarıdan aşağıya doğru artar. Genellikle alkali metaller en büyük atom yarıçapına sahiptir.</p>
+                    
+                    <table id="atomicRadiusTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>Sembol</th>
+                                <th>Atom Yarıçapı (pm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- JavaScript ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gameSection" class="section">
+            <div id="gameIntro">
+                <h2>Periyodik Özellikler Oyunu</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-question-circle"></i> Nasıl Oynanır?</h3>
+                    <p>Bu oyunda, iki element arasında seçilen özelliğe göre karşılaştırma yapmanız istenir. Hangi elementin seçilen özellik değerinin daha yüksek olduğunu tahmin etmelisiniz.</p>
+                    <p>Örneğin, "Hangi elementin elektronegatiflik değeri daha yüksektir?" sorusunda, iki elementten elektronegatifliği daha yüksek olanı seçmelisiniz.</p>
+                    <p>Her doğru cevap için 20 puan kazanırsınız. Toplam 5 soru sorulacaktır.</p>
+                </div>
+                
+                <button id="startGameBtn" class="btn btn-primary"><i class="fas fa-play"></i> Oyunu Başlat</button>
+            </div>
+            
+            <div id="gamePlay" style="display: none;">
+                <div class="game-progress">
+                    <span id="currentRound">Tur: 1/5</span>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="score"><i class="fas fa-star"></i> Puan: 0</span>
+                </div>
+                
+                <div id="questionText" class="question-text">Hangi elementin elektronegatiflik değeri daha yüksektir?</div>
+                
+                <div class="element-selection">
+                    <div class="element-card" id="element1">
+                        <div class="element-card-inner">
+                            <div class="element-card-front">
+                                <p id="element1Name">Element 1</p>
+                                <div class="element-symbol" id="element1Symbol">?</div>
+                                <p id="element1AtomicNumber">Atom Numarası: ?</p>
+                            </div>
+                            <div class="element-card-back">
+                                <div id="element1Details">
+                                    <!-- JavaScript ile doldurulacak -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selection-circle" id="element1Circle"></div>
+                    </div>
+                    
+                    <div class="vs-badge">VS</div>
+                    
+                    <div class="element-card" id="element2">
+                        <div class="element-card-inner">
+                            <div class="element-card-front">
+                                <p id="element2Name">Element 2</p>
+                                <div class="element-symbol" id="element2Symbol">?</div>
+                                <p id="element2AtomicNumber">Atom Numarası: ?</p>
+                            </div>
+                            <div class="element-card-back">
+                                <div id="element2Details">
+                                    <!-- JavaScript ile doldurulacak -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selection-circle" id="element2Circle"></div>
+                    </div>
+                </div>
+                
+                <div class="property-selection">
+                    <select id="propertySelect" class="custom-select">
+                        <option value="electronegativity">Elektronegatiflik</option>
+                        <option value="ionizationEnergy">İyonlaşma Enerjisi</option>
+                        <option value="electronAffinity">Elektron İlgisi</option>
+                        <option value="atomicRadius">Atom Yarıçapı</option>
+                        <option value="atomicMass">Atom Kütlesi</option>
+                    </select>
+                </div>
+                
+                <div class="answer-controls">
+                    <button id="checkAnswerBtn" class="btn btn-secondary"><i class="fas fa-check"></i> Cevabı Kontrol Et</button>
+                    <button id="nextQuestionBtn" class="btn btn-primary" disabled><i class="fas fa-arrow-right"></i> Sonraki Soru</button>
+                </div>
+                
+                <div id="feedback" class="feedback-container" style="display: none;">
+                    <div id="feedbackIcon" class="feedback-icon"></div>
+                    <p id="feedbackText" class="feedback-text"></p>
+                </div>
+            </div>
+            
+            <div id="gameResults" style="display: none;">
+                <h2 class="result-title">Oyun Sonuçları</h2>
+                
+                <div class="result-score">
+                    <div class="score-circle" id="finalScore">0</div>
+                    <p>Toplam Puan</p>
+                </div>
+                
+                <div id="resultFeedback" class="result-feedback"></div>
+                
+                <div class="result-actions">
+                    <button id="playAgainBtn" class="btn btn-primary"><i class="fas fa-redo"></i> Tekrar Oyna</button>
+                    <button id="goToInfoBtn" class="btn btn-secondary"><i class="fas fa-info-circle"></i> Bilgilendirme Bölümüne Git</button>
+                </div>
+                
+                <canvas id="confetti"></canvas>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="mini-atom-model">
+                        <div class="mini-nucleus"></div>
+                        <div class="mini-electron-shell">
+                            <div class="mini-electron"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="credits">
+                    <h3 class="credits-title">Hazırlayanlar</h3>
+                    <div class="credits-list">
+                        <div class="credit-item">
+                            <p class="credit-role">Kimya Öğretmeni</p>
+                            <p class="credit-name">Hakan ATAK</p>
+                        </div>
+                        <div class="credit-item">
+                            <p class="credit-role">Öğrenci</p>
+                            <p class="credit-name">Zafer VAROL</p>
+                        </div>
+                        <div class="credit-item">
+                            <p class="credit-role">Öğrenci</p>
+                            <p class="credit-name">Yağmur SEVİNÇ</p>
+                        </div>
+                        <div class="credit-item">
+                            <p class="credit-role">Öğrenci</p>
+                            <p class="credit-name">Ardahan SUNA</p>
+                        </div>
+                    </div>
+                </div>                               
+                
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-home"></i> Ana Sayfa</a>
+                    <a href="#"><i class="fas fa-atom"></i> Periyodik Tablo</a>
+                    <a href="#"><i class="fas fa-flask"></i> Diğer Kimya Oyunları</a>
+                    <a href="#"><i class="fas fa-envelope"></i> İletişim</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
